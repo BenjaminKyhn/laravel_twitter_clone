@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/profiles/{user:username}/follow', [FollowsController::class, 'store'])->name('follow');
     Route::get('/profiles/{user:username}/edit', [ProfilesController::class, 'edit'])->middleware('can:edit,user');
     Route::patch('/profiles/{user:username}', [ProfilesController::class, 'update'])->middleware('can:edit, user');
-    Route::get('/explore', [ExploreController::class, 'index']);
+    Route::get('/explore', ExploreController::class);
 });
 
 Route::get('/profiles/{user:username}', [ProfilesController::class, 'show'])->name('profile');
