@@ -120,6 +120,9 @@
                         </button>
                     </div>
                 </form>
+                <div class="flex flex-col">
+                    <a href="{{ route('login') }}" class="text-xs text-gray-700">Already have an account? Login</a>
+                </div>
             </div>
         </div>
     </div>
